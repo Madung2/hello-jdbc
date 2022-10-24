@@ -10,7 +10,7 @@ import java.sql.*;
 /*JDBC 메니저 사용*/
 @Slf4j
 public class MemberRepositoryV0 {
-    public Member save(Member member) {
+    public Member save(Member member) throws SQLException {
         String sql = "insert into member(member_id, money) values (?, ?)";
 
         Connection con = null;//연결할 커넥션
